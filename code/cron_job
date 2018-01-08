@@ -1,0 +1,32 @@
+Instructions for how to set up a cron job on a macOS Sierra
+
+1. Open terminal
+2. Create new cron tab using nano as an editor:
+  env EDITOR=nano crontab -e
+3. Create cron job, format = (timing), pathway to Rscript, pathway to scripttorun.r:
+30 16 * * * /usr/local/bin/Rscript /Volumes/SeaGate/EcoCast_HW/EcoCastGit_private/EcoCast-private/Code/Operationalizing_code_V2/3_Get_Env_Data_A.R
+32 16 * * * /usr/local/bin/Rscript /Volumes/SeaGate/EcoCast_HW/EcoCastGit_private/EcoCast-private/Code/Operationalizing_code_V2/3_Get_Env_Data_B.R
+40 16 * * * /usr/local/bin/Rscript /Volumes/SeaGate/EcoCast_HW/EcoCastGit_private/EcoCast-private/Code/Operationalizing_code_V2/3_Get_Env_Data_B.R
+44 16 * * * /usr/local/bin/Rscript /Volumes/SeaGate/EcoCast_HW/EcoCastGit_private/EcoCast-private/Code/Operationalizing_code_V2/3_Get_Env_Data_C.R
+
+3_Get_Env_Data_B can be run as many times as desired over the course of the day: each time it runs it will see what env data is missing, try to aquire it
+and then run ecocast once it has it. It will only run EcoCast if no final products are available, so it will never overwrite final products
+
+  if you don't know where Rscript is, enter : which Rscript into terminal
+4. control o (saves new line of text)
+5. hit return (writes new line of text to cron tab)
+6. control x (exits out of cron tab)
+
+Cron job is now set to run following timing prompts (see explanation in http://www.adminschoice.com/crontab-quick-reference)
+
+00 08 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_A.R
+05 08 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_B.R
+30 08 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_B.R
+30 09 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_B.R
+30 10 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_B.R
+30 11 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_B.R
+30 12 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_B.R
+30 14 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_B.R
+00 15 * * * /usr/local/bin/Rscript /Volumes/EcoCast_SeaGate/EcoCast_HW/EcoCastGit_private/Code/Operationalizing_code_V3/Get_Env_Data_C.R
+
+
