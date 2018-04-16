@@ -1,6 +1,8 @@
 # Code library to make operational EcoCast - a dynamic ocean management tool for fisheries bycatch
 ### Code authors: Heather Welch (UCSC, NOAA), Elliott Hazen (NOAA), Kylie Scales (University of the Sunshine Coast)
 
+<img src="inst/imgs/logo.png?raw=True" width="400">
+
 ### Relevant manuscripts: 
 Hazen et al. “An Eco-Informatic solution to ocean bycatch.” In review.  
 Welch et al. "Practical considerations for operationalizing dynamic management tools." In prep.  
