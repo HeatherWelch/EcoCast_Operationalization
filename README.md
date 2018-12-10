@@ -4,8 +4,8 @@
 <img src="inst/imgs/logo.png?raw=True" width="400">
 
 ### Relevant manuscripts: 
-Hazen et al. “An Eco-Informatic solution to ocean bycatch.” In review.  
-Welch et al. "Practical considerations for operationalizing dynamic management tools." In prep.  
+Hazen et al. 2018. “A dynamic ocean management tool to reduce bycatch and support sustainable fisheries.” Science Advances 4: eaar3001.  
+Welch et al. 2018. "Practical considerations for operationalizing dynamic management tools." Journal of Applied Ecology 54: 1415-1428. doi: 10.1111/1365-2664.13281.
 Hazen et al. 2017. "WhaleWatch: a dynamic management tool for predicting blue whale density in the California Current." Journal of Applied Ecology 54: 1415-1428.
 
 ### Description of scripts
